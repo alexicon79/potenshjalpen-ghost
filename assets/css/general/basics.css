@@ -1,17 +1,81 @@
 :root {
     --primary-color: var(--ghost-accent-color, #2ec4b6);
     --primary-text-color: #333;
-    --secondary-text-color: #aaa;
+    --secondary-text-color: rgb(117, 117, 117);
     --white-color: #fff;
     --light-gray-color: #f4f4f4;
     --mid-gray-color: #e9e9e9;
     --dark-gray-color: #1a1a1a;
+    --transparent: transparent;
     --black-color: #000;
-    --font-base: "Open Sans", sans-serif;
-    --font-alt: dosis, sans-serif;
+    --font-base: "KarlaRegular", sans-serif;
+    --font-header: "AvenirDemiBold", sans-serif;
+    --font-header-alt: "KarlaBold", sans-serif;
     --animation-base: ease-in-out;
     --shadow-base: 0 0 10px rgba(0, 0, 0, 0.02);
 }
+
+@font-face {
+	font-family: 'AvenirBold';
+	src:url('../fonts/avenir-next-bold.eot?w118d');
+	src:url('../fonts/avenir-next-bold.eot?#iefixw118d') format('embedded-opentype'),
+		url('../fonts/avenir-next-bold.woff2?w118d') format('woff2'),
+		url('../fonts/avenir-next-bold.woff?w118d') format('woff'),
+		url('../fonts/avenir-next-bold.ttf?w118d') format('truetype'),
+		url('../fonts/avenir-next-bold.svg?w118d#Linearicons-Free') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvenirDemiBold';
+	src:url('../fonts/avenir-next-demi-bold.eot?w118d');
+	src:url('../fonts/avenir-next-demi-bold.eot?#iefixw118d') format('embedded-opentype'),
+		url('../fonts/avenir-next-demi-bold.woff2?w118d') format('woff2'),
+		url('../fonts/avenir-next-demi-bold.woff?w118d') format('woff'),
+		url('../fonts/avenir-next-demi-bold.ttf?w118d') format('truetype'),
+		url('../fonts/avenir-next-demi-bold.svg?w118d#Linearicons-Free') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'KarlaRegular';
+    src: url('../fonts/karla-regular-webfont.woff2') format('woff2'),
+         url('../fonts/karla-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'KarlaBold';
+    src: url('../fonts/karla-bold-webfont.woff2') format('woff2'),
+         url('../fonts/karla-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'KarlaItalic';
+    src: url('../fonts/karla-italic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'KarlaBoldItalic';
+    src: url('../fonts/karla-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 html {
     box-sizing: border-box;
@@ -35,7 +99,7 @@ body {
     transition: background-color 0.3s var(--animation-base);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: -webkit-linear-gradient(88deg, rgb(212, 234, 233) 20%, rgb(170, 210, 204) 100%);
+    background-image: linear-gradient(88deg, rgb(212, 234, 233) 20%, rgb(170, 210, 204) 100%);
 }
 
 a {
@@ -45,15 +109,22 @@ a {
 
 h1,
 h2,
-h3,
+h3 {
+    margin: 0 0 15px;
+    color: var(--dark-gray-color);
+    font-family: var(--font-header);
+    line-height: 1.3;
+    font-weight: normal;
+}
+
 h4,
 h5,
 h6 {
     margin: 0 0 15px;
     color: var(--dark-gray-color);
-    font-family: var(--font-alt);
+    font-family: var(--font-base);
     line-height: 1.3;
-    font-weight: 700;
+    font-weight: normal;
 }
 
 p {

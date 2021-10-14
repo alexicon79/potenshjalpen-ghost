@@ -1,8 +1,7 @@
 .site-header {
     z-index: 80;
     padding: 0 30px;
-    background-color: var(--white-color);
-    box-shadow: var(--shadow-base);
+    background-color: var(--transparent);
 }
 
 .navbar {
@@ -34,7 +33,7 @@
 }
 
 .logo-text {
-    font-family: var(--font-alt);
+    font-family: var(--font-header-alt);
     font-size: 25px;
     line-height: 1;
     font-weight: 700;

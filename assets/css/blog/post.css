@@ -32,7 +32,6 @@
     line-height: 1;
     font-weight: 700;
     background-color: var(--primary-color);
-    border-radius: 15px;
 }
 
 .post-header {
