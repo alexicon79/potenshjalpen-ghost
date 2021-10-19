@@ -1,0 +1,19 @@
+    <div class="intro-wrapper">
+        <h1 class="main-tag">Vi lär så länge vi lever.</h1>
+        <p class="tag-preamble">Ökad kunskap ger resultat. För att må bra och fortsätta utvecklas gäller det att fortsätta lära sig. Varmt välkommen till Potenshjälpens kunskapsbank!</p>
+    </div>
+   
+    <div class="term-tags">
+        <a class="tag tag-current" href="{{@site.url}}">
+            {{#get "posts" limit="all"}}
+                <span class="tag-name">Alla</span><span class="tag-count">{{posts.length}}</span>
+            {{/get}}
+        </a>
+        {{#get "tags" limit="all" include="count.posts"}}
+            {{#foreach tags}}
+                <a class="tag" href="{{url}}">
+                    <span class="tag-name">{{name}}</span><span class="tag-count">{{count.posts}}</span>
+                </a>
+            {{/foreach}}
+        {{/get}}
+    </div>
