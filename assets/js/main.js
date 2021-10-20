@@ -12,6 +12,7 @@ $(function () {
     video();
     gallery();
     offCanvas();
+    highlightTermTag();
 });
 
 function author() {
@@ -221,4 +222,24 @@ function dimmer(action, speed) {
             dimmer.fadeOut(speed);
             break;
     }
+}
+
+function highlightTermTag() {
+    'use strict';
+    var currentSlug,
+        cleanSlug;
+    var items = document.querySelectorAll('.term-tags a.tag');
+
+    if (window.location.pathname.includes("tag/")) {
+        currentSlug = window.location.pathname.split('tag/')[1];
+        cleanSlug = currentSlug.endsWith('/') ? currentSlug.slice(0, -1) : currentSlug;
+    } else if (window.location.pathname === '/' ) {
+        cleanSlug = 'alla';
+    }    
+
+    items.forEach(item => {
+        if (item.dataset.slug === cleanSlug) {
+            item.classList.add('tag-current');
+        }
+    })
 }

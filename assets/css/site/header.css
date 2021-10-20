@@ -11,6 +11,21 @@
     height: 122px;
 }
 
+@media (max-width: 767px) {
+    .site-header {
+        padding: 0;
+    }
+
+    .navbar {
+        height: 72px;
+    }
+
+    .logo-image {
+        height: 20px;
+    }
+}
+
+
 .navbar-left,
 .navbar-right {
     flex: 2;

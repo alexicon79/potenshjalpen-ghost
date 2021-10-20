@@ -4,14 +4,14 @@
     </div>
    
     <div class="term-tags">
-        <a class="tag tag-current" href="{{@site.url}}">
+        <a class="tag" href="{{@site.url}}" data-slug="alla">
             {{#get "posts" limit="all"}}
                 <span class="tag-name">Alla</span><span class="tag-count">{{posts.length}}</span>
             {{/get}}
         </a>
         {{#get "tags" limit="all" include="count.posts"}}
             {{#foreach tags}}
-                <a class="tag" href="{{url}}">
+                <a class="tag" href="{{url}}" data-slug="{{slug}}">
                     <span class="tag-name">{{name}}</span><span class="tag-count">{{count.posts}}</span>
                 </a>
             {{/foreach}}
