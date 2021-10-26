@@ -229,17 +229,28 @@ function highlightTermTag() {
     var currentSlug,
         cleanSlug;
     var items = document.querySelectorAll('.term-tags a.tag');
+    var container = document.querySelector('.term-tags');
+
+    console.log(container.getBoundingClientRect().width);
+
+    container.addEventListener("scroll", function(){
+        console.log(this.scrollLeft);
+    })
 
     if (window.location.pathname.includes("tag/")) {
         currentSlug = window.location.pathname.split('tag/')[1];
         cleanSlug = currentSlug.endsWith('/') ? currentSlug.slice(0, -1) : currentSlug;
     } else if (window.location.pathname === '/' ) {
         cleanSlug = 'alla';
-    }    
+    }
 
     items.forEach(item => {
         if (item.dataset.slug === cleanSlug) {
             item.classList.add('tag-current');
+            item.scrollIntoView({behavior: "auto", block: "end", inline: "center"});
         }
+
+
+
     })
 }

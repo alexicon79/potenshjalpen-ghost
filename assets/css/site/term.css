@@ -20,14 +20,41 @@
 }
 
 @media (max-width: 767px) {
+
     .term-tags {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
         overflow-x: scroll;
+        justify-content: flex-start;
     }
+
+    .term-tags::-webkit-scrollbar {
+        height: 7px;
+    }
+
+    .term-tags::-webkit-scrollbar-track {
+        background: #406a6e;
+        border-radius: 20px;
+    }
+
+    .term-tags::-webkit-scrollbar-thumb {
+        background-color: var(--dark-gray-color);
+        border-radius: 40px;
+        border: 1px solid #406a6e;
+      }
 
     .term-tags .tag {
         white-space: nowrap;
+        background: var(--light-gray-color);
+        border-radius: 20px;
+        padding: 0 11px;
+        margin: 0 5px 10px;
+        line-height: 22px;
+    }
+
+    .term-tags .tag.tag-current {
+        border-bottom: 0;
+        background: var(--accent-color);
     }
 
     .term-tags .tag-count {
