@@ -21,7 +21,7 @@
 
 @media (max-width: 767px) {
 
-    .term-tags {
+    /* .term-tags {
         flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
         overflow-x: scroll;
@@ -41,11 +41,11 @@
         background-color: var(--dark-gray-color);
         border-radius: 40px;
         border: 1px solid #406a6e;
-      }
+      } */
 
     .term-tags .tag {
         white-space: nowrap;
-        background: var(--light-gray-color);
+        background: rgba(255,255,255,0.25);
         border-radius: 20px;
         padding: 0 11px;
         margin: 0 5px 10px;

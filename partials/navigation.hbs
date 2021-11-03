@@ -1,8 +1,40 @@
-<ul class="nav-list u-plain-list">
-    {{#foreach navigation}}
-        <li
-            class="menu-item menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}">
-            <a class="menu-item-link" href="{{url absolute="true"}}">{{label}}</a>
-        </li>
-    {{/foreach}}
-</ul>
+
+    {{!-- Template for secondary navigation --}}
+    {{#if isSecondary}}
+        {{#foreach navigation}}
+            <li class="submenu-item"><a class="submenu menu-item-link" href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    {{else}}
+        <ul class="nav-list u-plain-list hidden-xs hidden-sm hidden-md">
+            {{#foreach navigation}}
+                {{#has index="1"}}              
+                    <li
+                        class="dropdown menu-item menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}">
+                        <a class="dropdown-toggle menu-item-link" href="#toggle">{{label}}</a>
+
+                        <ul class="dropdown-menu u-plain-list">{{ navigation type="secondary"}}</ul>
+                    </li>
+                {{else}}
+                    <li
+                        class="menu-item menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}">
+                        <a class="menu-item-link" href="{{url absolute="true"}}">{{label}}</a>
+                    </li>
+                {{/has}}
+            {{/foreach}}
+        </ul>
+        <ul class="nav-list mobile-only hidden-lg hidden-xl">
+            {{#foreach navigation}}
+                {{#has index="1"}}              
+                    <li class="menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}">
+                        <a class="dropdown-toggle menu-item-link" href="#toggle">{{label}}</a>
+                    </li>
+                    {{ navigation type="secondary"}}
+                {{else}}
+                    <li
+                        class="menu-item menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}">
+                        <a class="menu-item-link" href="{{url absolute="true"}}">{{label}}</a>
+                    </li>
+                {{/has}}
+            {{/foreach}}
+        </ul>
+    {{/if}}

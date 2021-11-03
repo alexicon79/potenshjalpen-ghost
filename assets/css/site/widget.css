@@ -14,13 +14,13 @@
 .widget-title {
     margin: -20px -20px 20px;
     padding: 15px 20px;
-    border-bottom: 1px solid var(--light-gray-color);
+    /* border-bottom: 1px solid var(--light-gray-color); */
     color: var(--dark-gray-color);
     font-family: var(--font-base);
     font-size: 11px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    background: var(--accent-color);
+    background: #b9cfce;
     font-weight: bold;
 }
 
@@ -36,7 +36,7 @@
 
 .widget-tags .tag-name {
     font-family: var(--font-header-alt);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 

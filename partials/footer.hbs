@@ -1,29 +1,53 @@
-<footer class="site-footer">
+<footer class="site-footer footer-area section-gap">
     <div class="container">
-        <div class="footer-inner">
-            <div class="social">
+        <div class="row">
+            <div class="col-lg-3 col-md-12">
+                <div class="single-footer-widget">
+                    <h6>Potenshjälpen</h6>
+                    <ul class="footer-nav">
+                        <li><a href="https://www.potenshjalpen.se#vad">Vad är Potenshjälpen?</a></li>
+                        <li><a href="https://www.potenshjalpen.se#hur">Hur fungerar det?</a></li>
+                        <li><a href="https://www.potenshjalpen.se#varfor">Varför finns vi?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="single-footer-widget">
+                    <h6 class="hidden-xs hidden-sm hidden-md">&nbsp;</h6>
+                    <ul class="footer-nav">
+                        <li><a href="https://www.potenshjalpen.se#potensproblem">Vad är potensproblem?</a></li>
+                        <li><a href="https://www.potenshjalpen.se#om-oss">Om oss</a></li>
+                        <li><a href="https://www.potenshjalpen.se#faq">Vanliga frågor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <div class="single-footer-widget">
+                    <h6 class="extra-margin-mobile ">Övrig info</h6>
+                    <ul class="footer-nav">
+                        <li><a href="https://www.potenshjalpen.se/villkor.html">Villkor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row footer-bottom">
+            <p class="col-lg-9 col-sm-12 footer-text m-0 text-white">Copyright © 2021 Relieve Healthcare Scandinavia AB | Webb &amp; design: <a href="https://kaistudios.se" target="_blank">KAi Studios</a>
+            </p>
+            <div class="col-lg-3 col-sm-12 footer-social"><a href="#">
                 {{#if @site.facebook}}
-                    <a class="social-item social-item-facebook"
-                        href="{{facebook_url @site.facebook}}" target="_blank"
-                        rel="noopener noreferrer" aria-label="Facebook">
-                        <i class="icon icon-facebook"></i>
-                    </a>
+                <a class="social-item social-item-facebook" href="{{facebook_url @site.facebook}}" target="_blank"
+                    rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="icon icon-facebook"></i>
+                </a>
                 {{/if}}
                 {{#if @site.twitter}}
-                    <a class="social-item social-item-twitter"
-                        href="{{twitter_url @site.twitter}}" target="_blank"
-                        rel="noopener noreferrer" aria-label="Twitter">
-                        <i class="icon icon-twitter"></i>
-                    </a>
-                {{/if}}
-                <a class="social-item social-item-rss"
-                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/"
-                    target="_blank" rel="noopener noreferrer" aria-label="RSS">
-                    <i class="icon icon-rss"></i>
+                <a class="social-item social-item-twitter" href="{{twitter_url @site.twitter}}" target="_blank"
+                    rel="noopener noreferrer" aria-label="Twitter">
+                    <i class="icon icon-twitter"></i>
                 </a>
-            </div>
-            <div class="copyright">
-                &copy; Relieve Healthcare Scandinavia AB
+                {{/if}}
+                <img src="{{asset 'images/klarna.svg'}}" style="margin-left: 4em; margin-right: 1em;"> 
+                <img src="{{asset 'images/bankid_v_high_rgb.png'}}" width="60px">
             </div>
         </div>
     </div>

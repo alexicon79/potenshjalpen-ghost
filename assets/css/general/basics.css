@@ -175,6 +175,11 @@ p.tag-preamble {
 }
 
 @media (max-width: 767px) {
+    .intro-wrapper {
+        margin-top: 25px;
+        margin-bottom: 3em;
+    }
+
     .intro-wrapper::before {
         width: 30vw;
         height: 30vw;
@@ -187,6 +192,7 @@ p.tag-preamble {
     p.tag-preamble {
         padding: 0;
         font-size: 1.1em;
+        letter-spacing: -0.2px;
     }
 }
 

@@ -13,6 +13,7 @@ $(function () {
     gallery();
     offCanvas();
     highlightTermTag();
+    toggleDropdown();
 });
 
 function author() {
@@ -253,4 +254,20 @@ function highlightTermTag() {
 
 
     })
+}
+
+function toggleDropdown() {
+    'use strict';
+    var dropDownTrigger = document.querySelector('.dropdown');
+    var dropDownBlock = document.querySelector('.dropdown-menu');
+
+    dropDownTrigger.addEventListener('click', function(e){
+        if ( dropDownTrigger.classList.contains('show') ) {
+            dropDownBlock.classList.remove('show');
+            dropDownTrigger.classList.remove('show');
+        } else {
+            dropDownBlock.classList.add('show');
+            dropDownTrigger.classList.add('show');
+        }        
+    });
 }
