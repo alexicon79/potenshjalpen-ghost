@@ -77,6 +77,16 @@
     line-height: 1.8;
 }
 
+.post-content a {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.post-content.u-text-format h2,
+.post-content.u-text-format h3 {
+    padding-top: 20px; 
+    margin-top: 0;
+}
+
 .post-tags {
     display: flex;
     flex-wrap: wrap;
